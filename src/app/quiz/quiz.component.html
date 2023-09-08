@@ -1,0 +1,8 @@
+<div class="question">
+    <h2>{{ currentQuestion.question }}</h2>
+</div>
+<div class="answers">
+    <button *ngFor="let answer of currentQuestion.answers" class="answer-button" (click)="checkAnswer(answer)">
+        {{ answer }}
+    </button>
+</div>

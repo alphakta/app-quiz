@@ -1,0 +1,36 @@
+.question {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .answers {
+    display: flex;
+    flex-direction: column; /* Afficher les boutons en colonne */
+    align-items: center; /* Centrez les boutons horizontalement */
+  }
+  
+  .answer-button {
+    background-color: #f5be18; /* Bleu traditionnel du Real Madrid */
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    margin: 8px 0px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+  }
+  
+  .answer-button:hover {
+    background-color: #003366; /* Bleu plus sombre au survol */
+  }
+  
+  .correct-answer-button {
+    background-color: #009900;
+  }
+  
+  .incorrect-answer-button {
+    background-color: #ff3333;
+  }
