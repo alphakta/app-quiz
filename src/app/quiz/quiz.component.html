@@ -1,8 +1,23 @@
-<div class="question">
-    <h2>{{ currentQuestion.question }}</h2>
+<div>
+    <h1>Quiz</h1>
+    <div *ngIf="!isLastQuestion">
+        <div class="question">
+            <h2>{{ currentQuestion.question }}</h2>
+        </div>
+        <div class="answers">
+            <button *ngFor="let answer of currentQuestion.answers" class="answer-button" (click)="checkAnswer(answer)">
+                {{ answer }}
+            </button>
+        </div>
+    </div>
+
 </div>
-<div class="answers">
-    <button *ngFor="let answer of currentQuestion.answers" class="answer-button" (click)="checkAnswer(answer)">
-        {{ answer }}
-    </button>
+<div class="results" *ngIf="isLastQuestion">
+    <div class="score">
+        <h2>Votre score est de {{ score }} / {{ dataQuiz.length }}</h2>
+    </div>
+
+    <button routerLink="/">
+        Recommencer <fa-icon [icon]="faFutbol"></fa-icon>
+      </button>
 </div>

@@ -7,12 +7,12 @@
   
   .answers {
     display: flex;
-    flex-direction: column; /* Afficher les boutons en colonne */
-    align-items: center; /* Centrez les boutons horizontalement */
+    flex-direction: column;
+    align-items: center;
   }
   
   .answer-button {
-    background-color: #f5be18; /* Bleu traditionnel du Real Madrid */
+    background-color: #f5be18;
     color: #fff;
     border: none;
     padding: 15px 20px;
@@ -24,7 +24,7 @@
   }
   
   .answer-button:hover {
-    background-color: #003366; /* Bleu plus sombre au survol */
+    background-color: #003366;
   }
   
   .correct-answer-button {
@@ -33,4 +33,22 @@
   
   .incorrect-answer-button {
     background-color: #ff3333;
+  }
+
+  button {
+    background-color: #f5be18;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .icon {
+    font-size: 36px;
   }

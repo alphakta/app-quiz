@@ -14,9 +14,7 @@ import { faFutbol } from '@fortawesome/free-solid-svg-icons';
 })
 export class WelcomeComponent implements OnInit {
   faFutbol = faFutbol;
-
   constructor() { }
-
   ngOnInit(): void {
   }
 

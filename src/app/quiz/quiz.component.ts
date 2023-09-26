@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { quizData } from './data';
+import { faFutbol } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-quiz',
@@ -12,6 +13,9 @@ export class QuizComponent implements OnInit {
 
   currentQuestionIndex = 0;
   currentQuestion: any;
+  score = 0;
+  faFutbol = faFutbol;
+
 
   ngOnInit(): void {
     this.loadQuestion(this.currentQuestionIndex);
@@ -22,18 +26,23 @@ export class QuizComponent implements OnInit {
   }
 
   checkAnswer(answer: string): void {
-    if (answer === this.currentQuestion.correctAnswer) {
-      console.log("Bonne réponse !");
-    } else {
-      console.log("Mauvaise réponse.");
-    }
-
     this.currentQuestionIndex++;
+    if (answer === this.currentQuestion.correctAnswer) {
+      this.score++;
+    }
     if (this.currentQuestionIndex < this.dataQuiz.length) {
       this.loadQuestion(this.currentQuestionIndex);
-    } else {
-      console.log("Fin du quizz.");
     }
   }
 
+  // reloadQuiz(): void {
+  //   this.currentQuestionIndex = 0;
+  //   this.score = 0;
+  //   console.log(this.currentQuestionIndex)
+  //   this.loadQuestion(this.currentQuestionIndex);
+  // }
+
+  get isLastQuestion(): boolean {
+    return this.currentQuestionIndex === this.dataQuiz.length - 1;
+  }
 }
