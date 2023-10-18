@@ -1,1 +1,5 @@
 <h3>Veuillez selectionner la catégorie sur laquelle vous souhaitez passer le test :</h3>
+
+<div style="margin-top: 10px;" *ngFor="let category of categoryArray">
+    <button class="btn btn-primary" (click)="redirectToCategory(category.id)">{{ category.name }}</button>
+  </div>
