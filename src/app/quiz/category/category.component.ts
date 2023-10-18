@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryService } from '../shared/services/category.service';
+import { CategoryService } from '../../shared/services/category.service';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-category',
@@ -10,14 +9,15 @@ import { FormsModule } from '@angular/forms';
 })
 export class CategoryComponent implements OnInit {
 
-  constructor(private readonly categoryService:CategoryService, private router: Router) { 
+  constructor(
+    private readonly categoryService: CategoryService,
+    private router: Router) {
     this.filteredCategories = this.categoryArray;
-
   }
+
   categoryArray: any[] = [];
   searchText: string = '';
   filteredCategories: any[] = [];
-
 
   redirectToCategory(categoryId: number) {
     this.router.navigate(['/quiz', categoryId]);
