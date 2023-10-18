@@ -7,7 +7,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { CategoryComponent } from './quiz/category/category.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'quiz/:categoryId', component: QuizComponent},
   { path: 'category', component: CategoryComponent},

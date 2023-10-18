@@ -37,6 +37,10 @@ export class QuizComponent implements OnInit {
     });
   };
 
+  get nameCategory(): string {
+    return this.categoryId === 1 ? 'FC Barcelona' : 'Real Madrid';
+  }
+
   loadQuestion(index: number): void {
     console.log(this.dataQuiz[index])
     this.currentQuestion = this.dataQuiz[index];

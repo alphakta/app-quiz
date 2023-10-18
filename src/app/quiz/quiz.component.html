@@ -1,5 +1,5 @@
 <div *ngIf="dataQuiz">
-    <h1>Quiz</h1>
+    <h1>Quiz {{ nameCategory }}</h1>
     <div *ngIf="!isLastQuestion">
         <app-question [question]="currentQuestion"></app-question>
         <app-answer [answers]="currentQuestion.answers" (answer)="checkAnswer($event)"></app-answer>
