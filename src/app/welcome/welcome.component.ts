@@ -6,9 +6,7 @@ import { faFutbol } from '@fortawesome/free-solid-svg-icons';
   template: `
       <h1>Application Quizz Football</h1>
       <p>Viens testez tes connaissances sur le football en répondant à toutes nos questions les plus passionnantes et insolites...</p>
-      <button routerLink="/quiz">
-        Commencer <fa-icon [icon]="faFutbol"></fa-icon>
-      </button>
+      <app-category></app-category>
     `,
   styleUrls: ['./welcome.component.css']
 })
