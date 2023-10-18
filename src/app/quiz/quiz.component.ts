@@ -1,7 +1,9 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { quizData } from './data';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+// import { quizData } from './data';
 import { faFutbol } from '@fortawesome/free-solid-svg-icons';
 import { QuizService } from '../shared/services/quizz.service';
+import { IQuestion } from '../shared/services/question.interface';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-quiz',
@@ -9,8 +11,12 @@ import { QuizService } from '../shared/services/quizz.service';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+  @Input() categoryId!: number;
 
-  constructor(private quizService: QuizService) { }
+  constructor(
+    private readonly quizService: QuizService,
+    private readonly route: ActivatedRoute
+    ) { }
 
   dataQuiz: any[] = [];
 
@@ -20,7 +26,11 @@ export class QuizComponent implements OnInit {
   faFutbol = faFutbol;
 
   ngOnInit(): void {
-    this.quizService.getQuestions().subscribe((data: any) => {
+    this.route.params.subscribe(params => {
+      this.categoryId = params['categoryId'];
+    });
+
+    this.quizService.getQuestionsByCategory(this.categoryId).subscribe((data: any) => {
       console.log(data)
       this.dataQuiz = data;
       this.loadQuestion(this.currentQuestionIndex);

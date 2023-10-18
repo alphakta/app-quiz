@@ -9,7 +9,7 @@ import { CategoryComponent } from './category/category.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'welcome', component: WelcomeComponent },
-  { path: 'quiz', component: QuizComponent},
+  { path: 'quiz/:categoryId', component: QuizComponent},
   { path: 'category', component: CategoryComponent},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },

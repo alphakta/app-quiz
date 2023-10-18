@@ -12,4 +12,18 @@ body {
   min-height: 100vh;
 }
 
+button {
+  background-color: #f5be18;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
   
