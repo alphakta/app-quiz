@@ -20,9 +20,14 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
       username: new FormControl('', Validators.required),
-      password: new FormControl('', [Validators.required, Validators.minLength(4)]),
+      password: new FormControl('', 
+      [
+        Validators.required, 
+        Validators.minLength(4),
+        // this.checkPass
+      ]),
       confirmPassword: new FormControl('', Validators.required),
-    }, { validators: this.checkPasswords });
+    }, { validators: [this.checkPasswords, this.checkPasswordUsername] });
   }
 
   onSubmit() {
@@ -40,12 +45,23 @@ export class RegisterComponent implements OnInit {
     return password?.value !== confirmPassword?.value ? { missMatch: true } : null;
   }
 
+  private checkPasswordUsername(control: FormGroup) {
+    const username = control.get('username');
+    const password = control.get('password');
+
+    if (password?.value.includes(username?.value)) {
+      password.setErrors({ containsUsername: true });
+      return { containsUsername: true };
+    }
+    return null;
+  }
+
+  checkPass() {}
+
   get getErrorLabel() {
     if (this.registerForm.errors?.['required']) return 'Les champs sont obligatoires';
     if (!!this.registerForm.controls?.['password']?.errors?.['minlength']) return `La longueur minimal pour votre mot de passe est ${this.registerForm.controls?.['password']?.errors?.['minlength']?.requiredLength}`;
     if (this.registerForm.errors?.['missMatch']) return 'Les mots de passe ne correspondent pas';
     return 'Un problème est survenu';
   }
-
-
 }
