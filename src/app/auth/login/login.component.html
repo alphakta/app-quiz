@@ -1,0 +1,11 @@
+<h1>Connexion</h1>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label for="email">Pseudo</label>
+    <input formControlName="username" type="text" id="username" name="username" required>
+
+    <label for="motdepasse">Mot de passe :</label>
+    <input formControlName="password" type="password" id="password" name="password" required>
+
+    <button type="submit">Se connecter</button>
+    <p>Pas encore parmi nous ? <a routerLink="/register">Créer toi un compte !</a></p>
+</form>

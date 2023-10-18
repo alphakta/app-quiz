@@ -1,14 +1,8 @@
-<div>
+<div *ngIf="dataQuiz">
     <h1>Quiz</h1>
     <div *ngIf="!isLastQuestion">
-        <div class="question">
-            <h2>{{ currentQuestion.question }}</h2>
-        </div>
-        <div class="answers">
-            <button *ngFor="let answer of currentQuestion.answers" class="answer-button" (click)="checkAnswer(answer)">
-                {{ answer }}
-            </button>
-        </div>
+        <app-question [question]="currentQuestion"></app-question>
+        <app-answer [answers]="currentQuestion.answers" (answer)="checkAnswer($event)"></app-answer>
     </div>
 
 </div>
@@ -19,5 +13,5 @@
 
     <button routerLink="/">
         Recommencer <fa-icon [icon]="faFutbol"></fa-icon>
-      </button>
+    </button>
 </div>
