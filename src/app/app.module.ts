@@ -12,6 +12,7 @@ import { AnswerComponent } from './quiz/answer/answer.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     QuestionComponent,
     AnswerComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
