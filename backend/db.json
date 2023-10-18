@@ -1,4 +1,14 @@
 {
+  "categories": [
+      {
+        "id": 1,
+        "name": "Real Madrid"
+      },
+      {
+        "id": 2,
+        "name": "FC Barcelone"
+      }
+  ],
   "questions": [
     {
       "id": 1,
@@ -9,7 +19,8 @@
         "Les Merengues",
         "Les Blancos"
       ],
-      "correctAnswer": "Les Merengues"
+      "correctAnswer": "Les Merengues",
+      "categoryId": 1
     },
     {
       "id": 2,
@@ -20,7 +31,8 @@
         "Santiago Bernabéu",
         "Anfield"
       ],
-      "correctAnswer": "Santiago Bernabéu"
+      "correctAnswer": "Santiago Bernabéu",
+      "categoryId": 1
     },
     {
       "id": 3,
@@ -31,7 +43,8 @@
         "Ferenc Puskás",
         "Fernando Hierro"
       ],
-      "correctAnswer": "Ferenc Puskás"
+      "correctAnswer": "Ferenc Puskás",
+      "categoryId": 1
     },
     {
       "id": 4,
@@ -42,7 +55,8 @@
         "13 fois",
         "20 fois"
       ],
-      "correctAnswer": "13 fois"
+      "correctAnswer": "13 fois",
+      "categoryId": 1
     },
     {
       "id": 5,
@@ -53,7 +67,8 @@
         "Jose Mourinho",
         "Carlo Ancelotti"
       ],
-      "correctAnswer": "Zinedine Zidane"
+      "correctAnswer": "Zinedine Zidane",
+      "categoryId": 1
     },
     {
       "id": 6,
@@ -64,7 +79,8 @@
         "Alfredo Di Stéfano",
         "Raul"
       ],
-      "correctAnswer": "Cristiano Ronaldo"
+      "correctAnswer": "Cristiano Ronaldo",
+      "categoryId": 1
     },
     {
       "id": 7,
@@ -75,7 +91,8 @@
         "1947",
         "1960"
       ],
-      "correctAnswer": "1902"
+      "correctAnswer": "1902",
+      "categoryId": 1
     },
     {
       "id": 8,
@@ -86,7 +103,8 @@
         "Iker Casillas",
         "Luis Figo"
       ],
-      "correctAnswer": "Florentino Pérez"
+      "correctAnswer": "Florentino Pérez",
+      "categoryId": 1
     },
     {
       "id": 9,
@@ -97,7 +115,8 @@
         "Sevilla FC",
         "Valence CF"
       ],
-      "correctAnswer": "FC Barcelone"
+      "correctAnswer": "FC Barcelone",
+      "categoryId": 1
     },
     {
       "id": 10,
@@ -108,7 +127,128 @@
         "8 fois",
         "10 fois"
       ],
-      "correctAnswer": "5 fois"
+      "correctAnswer": "5 fois",
+      "categoryId": 1
+    },
+    {
+      "id": 11,
+      "questionLabel": "Quel est le surnom du FC Barcelone ?",
+      "answers": [
+        "Les Blaugranas",
+        "Les Culés",
+        "Les Azulgranas",
+        "Les Barça"
+      ],
+      "correctAnswer": "Les Blaugranas",
+      "categoryId": 2
+    },
+    {
+      "id": 12,
+      "questionLabel": "Dans quel stade le FC Barcelone joue-t-il ses matchs à domicile ?",
+      "answers": [
+        "Camp Nou",
+        "Santiago Bernabéu",
+        "Wanda Metropolitano",
+        "Anfield"
+      ],
+      "correctAnswer": "Camp Nou",
+      "categoryId": 2
+    },
+    {
+      "id": 13,
+      "questionLabel": "Qui est l'un des joueurs emblématiques du FC Barcelone surnommé 'La Pulga' ?",
+      "answers": [
+        "Lionel Messi",
+        "Xavi Hernandez",
+        "Andrés Iniesta",
+        "Gerard Piqué"
+      ],
+      "correctAnswer": "Lionel Messi",
+      "categoryId": 2
+    },
+    {
+      "id": 14,
+      "questionLabel": "Combien de fois le FC Barcelone a-t-il remporté la Ligue des champions de l'UEFA ?",
+      "answers": [
+        "5 fois",
+        "3 fois",
+        "2 fois",
+        "8 fois"
+      ],
+      "correctAnswer": "5 fois",
+      "categoryId": 2
+    },
+    {
+      "id": 15,
+      "questionLabel": "Quel entraîneur a mené le FC Barcelone à un triplé historique en 2009 (Ligue des champions, Liga et Coupe du Roi) ?",
+      "answers": [
+        "Pep Guardiola",
+        "Luis Enrique",
+        "Frank Rijkaard",
+        "Tito Vilanova"
+      ],
+      "correctAnswer": "Pep Guardiola",
+      "categoryId": 2
+    },
+    {
+      "id": 16,
+      "questionLabel": "Qui détient le record du plus grand nombre de buts marqués pour le FC Barcelone ?",
+      "answers": [
+        "Lionel Messi",
+        "Luis Suárez",
+        "Samuel Eto'o",
+        "Ronaldinho"
+      ],
+      "correctAnswer": "Lionel Messi",
+      "categoryId": 2
+    },
+    {
+      "id": 17,
+      "questionLabel": "En quelle année le FC Barcelone a-t-il été fondé ?",
+      "answers": [
+        "1902",
+        "1899",
+        "1910",
+        "1921"
+      ],
+      "correctAnswer": "1899",
+      "categoryId": 2
+    },
+    {
+      "id": 18,
+      "questionLabel": "Qui est le président actuel du FC Barcelone (en septembre 2021) ?",
+      "answers": [
+        "Joan Laporta",
+        "Sandro Rosell",
+        "Josep Maria Bartomeu",
+        "Agustí Benedito"
+      ],
+      "correctAnswer": "Joan Laporta",
+      "categoryId": 2
+    },
+    {
+      "id": 19,
+      "questionLabel": "Quel club est le plus grand rival du FC Barcelone ?",
+      "answers": [
+        "Real Madrid",
+        "Atlético Madrid",
+        "Espanyol Barcelone",
+        "FC Valence"
+      ],
+      "correctAnswer": "Real Madrid",
+      "categoryId": 2
+    },
+    {
+      "id": 20,
+      "questionLabel": "Combien de fois le FC Barcelone a-t-il remporté la Supercoupe de l'UEFA ?",
+      "answers": [
+        "5 fois",
+        "3 fois",
+        "2 fois",
+        "7 fois"
+      ],
+      "correctAnswer": "5 fois",
+      "categoryId": 2
     }
   ],
   "users": [
