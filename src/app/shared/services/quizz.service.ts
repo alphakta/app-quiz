@@ -1,57 +1,7 @@
-// import { HttpClient } from '@angular/common/http';
-// import { Injectable } from '@angular/core';
-// import { Observable } from 'rxjs';
-// import { quizData } from 'src/app/quiz/data';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class QuizService {
-//   private dataQuiz = quizData;
-
-//   private currentQuestionIndex = 0;
-//   private score = 0;
-//   private apiUrl = 'http://localhost:3000/questions';
-
-//   constructor(private http: HttpClient) {
-//   }
-
-//   getQuestions(): Observable<any[]> {
-//     return this.http.get<any[]>(this.apiUrl);
-//   }
-
-//   getCurrentQuestion(): any {
-//     return this.dataQuiz[this.currentQuestionIndex];
-//   }
-
-//   checkAnswer(answer: string): void {
-//     if (answer === this.getCurrentQuestion().correctAnswer) {
-//       this.score++;
-//     }
-//     this.currentQuestionIndex++;
-//   }
-
-//   isLastQuestion(): boolean {
-//     return this.currentQuestionIndex === this.dataQuiz.length - 1;
-//   }
-
-//   resetQuiz(): void {
-//     this.currentQuestionIndex = 0;
-//     this.score = 0;
-//   }
-
-//   getScore(): number {
-//     return this.score;
-//   }
-
-//   getTotalQuestions(): number {
-//     return this.dataQuiz.length;
-//   }
-// }
-
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { IQuestion } from './question.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -64,8 +14,12 @@ export class QuizService {
   constructor(private http: HttpClient) {
   }
 
-  getQuestions(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
+  getQuestions(): Observable<IQuestion[]> {
+    return this.http.get<IQuestion[]>(this.apiUrl);
+  }
+
+  getQuestionsByCategory(categoryId: number): Observable<IQuestion[]> {
+    return this.http.get<IQuestion[]>(this.apiUrl + '?categoryId=' + categoryId);
   }
 
   getCurrentQuestionIndex(): number {
