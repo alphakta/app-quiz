@@ -1,5 +1,13 @@
 <h3>Veuillez sélectionner la catégorie sur laquelle vous souhaitez passer le test :</h3>
-<input type="text" [(ngModel)]="searchText" (input)="filterCategories()" placeholder="Rechercher une catégorie">
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchText"
+    (input)="filterCategories()"
+    placeholder="Rechercher une catégorie"
+    class="search-input"
+  />
+</div>
 
 <div class="button-container">
   <div *ngFor="let category of filteredCategories" style="margin-right: 10px;">

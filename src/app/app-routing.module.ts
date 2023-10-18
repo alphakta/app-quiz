@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WelcomeComponent } from './welcome/welcome.component';
+import { WelcomeComponent } from './quiz/welcome/welcome.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { CategoryComponent } from './category/category.component';
+import { CategoryComponent } from './quiz/category/category.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
